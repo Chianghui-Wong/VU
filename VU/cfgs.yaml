@@ -1,0 +1,31 @@
+# Data
+dataset : "cfm" 
+dataset_dir : "./data/"
+class_num: 10
+color_channel : 1
+
+# Architecture
+model : "GFNN"
+layer_num : 2 # 2 8 10 
+hidden_size : 100 
+input_size : 100
+
+# Train
+measure : "within_variance" 
+optimization : "adam"
+lr : 3e-3 # 3e-3 1e-3 3e-4
+simple_train_batch_size : 128 
+simple_test_batch_size : 100 
+epoch_num : 600
+momentum : 0.9 
+weight_decay : 5e-4 
+sample_size_per_class : 100
+normalization : None
+eps : None
+
+# Other
+log_dir : "./log/"
+dir_path: "./"
+seed : 666
+checkpoint_dir : "./checkpoint"
+figure_dir : "./figure"
